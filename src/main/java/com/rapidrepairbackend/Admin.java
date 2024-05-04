@@ -8,7 +8,7 @@ import lombok.Setter;
 @Getter
 @Setter
 @AllArgsConstructor
-public class  Admin{
+public class Admin {
     private long id;
     private String username;
     private String password;

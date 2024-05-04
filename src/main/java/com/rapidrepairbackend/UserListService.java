@@ -59,7 +59,7 @@ public class UserListService {
     public User createUser(User newUser) {
         if (newUser.getName() == "" || newUser.getSurname() == "" || newUser.getAge() == 0 || newUser.getEmail() == "" || newUser.getPassword() == "") {
             System.out.println("Please enter all details");
-        }else {
+        } else {
 
             newUser.setId(this.id++);
             this.users.add(newUser);

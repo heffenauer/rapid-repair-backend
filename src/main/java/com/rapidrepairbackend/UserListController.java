@@ -114,14 +114,13 @@ public class UserListController {
 
     @PostMapping("/createUser")
     public User addUser(@RequestBody User user) {
-    return this.userService.createUser(user);
+        return this.userService.createUser(user);
     }
 
     @PutMapping("/updateUser/{id}")
     public User updateUser(@PathVariable Long id, @RequestBody User user) {
-        return this.userService.updateUser(id,user);
+        return this.userService.updateUser(id, user);
     }
-
 
 
 }

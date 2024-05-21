@@ -1,4 +1,3 @@
-// /src/main/java/com/rapidrepairbackend/repositories/ServiceRepository.java
 package com.rapidrepairbackend.repositories;
 
 import org.springframework.data.jpa.repository.JpaRepository;

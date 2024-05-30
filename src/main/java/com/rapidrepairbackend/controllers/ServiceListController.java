@@ -1,6 +1,8 @@
 // /src/main/java/com/rapidrepairbackend/ServiceListController.java
-package com.rapidrepairbackend;
+package com.rapidrepairbackend.controllers;
 
+import com.rapidrepairbackend.service.ServiceListService;
+import com.rapidrepairbackend.entity.ServiceEntity;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.List;

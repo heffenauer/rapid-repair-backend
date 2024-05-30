@@ -1,7 +1,7 @@
 package com.rapidrepairbackend.repositories;
 
 import org.springframework.data.jpa.repository.JpaRepository;
-import com.rapidrepairbackend.ServiceEntity;
+import com.rapidrepairbackend.entity.ServiceEntity;
 
 import java.util.List;
 

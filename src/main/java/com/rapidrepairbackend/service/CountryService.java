@@ -1,5 +1,6 @@
-package com.rapidrepairbackend;
+package com.rapidrepairbackend.service;
 
+import com.rapidrepairbackend.entity.Country;
 import org.springframework.stereotype.Service;
 
 import java.util.ArrayList;
@@ -11,11 +12,11 @@ public class CountryService {
   private List<Country> countries = new ArrayList<>();
 
   // Initialize with some data
-  public CountryService() {
-    countries.add(new Country("United States", "US"));
-    countries.add(new Country("Canada", "CA"));
-    countries.add(new Country("Bosna", "BA"));
-  }
+//  public CountryService() {
+//    countries.add(new Country("United States", "US"));
+//    countries.add(new Country("Canada", "CA"));
+//    countries.add(new Country("Bosna", "BA"));
+//  }
 
   public List<Country> getCountries() {
     return countries;

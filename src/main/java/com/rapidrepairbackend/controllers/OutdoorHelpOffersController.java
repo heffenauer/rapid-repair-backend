@@ -1,6 +1,8 @@
-package com.rapidrepairbackend;
+package com.rapidrepairbackend.controllers;
 
 
+import com.rapidrepairbackend.entity.OutdoorHelpOffers;
+import com.rapidrepairbackend.service.OutdoorHelpOffersService;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.List;

@@ -1,6 +1,7 @@
 // /src/main/java/com/rapidrepairbackend/ServiceListService.java
-package com.rapidrepairbackend;
+package com.rapidrepairbackend.service;
 
+import com.rapidrepairbackend.entity.ServiceEntity;
 import com.rapidrepairbackend.repositories.ServiceRepository;
 import org.springframework.stereotype.Service;
 

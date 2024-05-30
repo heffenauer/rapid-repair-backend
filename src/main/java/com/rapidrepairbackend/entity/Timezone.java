@@ -1,4 +1,4 @@
-package com.rapidrepairbackend;
+package com.rapidrepairbackend.entity;
 
 import jakarta.persistence.*;
 import lombok.AllArgsConstructor;
@@ -6,23 +6,16 @@ import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
 
-@Table(name = "services")
 @Entity
 @Getter
 @Setter
-@AllArgsConstructor
 @NoArgsConstructor
-public class ServiceEntity {
+@AllArgsConstructor
+public class Timezone {
   @Id
   @GeneratedValue(strategy = GenerationType.IDENTITY)
-  private long id;
+  private Long id;
 
-  @Column(name = "name")
   private String name;
-
-  @Column(name = "description")
-  private String description;
-
-  @Column(name = "price")
-  private double price;
+  private String code;
 }

@@ -1,6 +1,9 @@
-package com.rapidrepairbackend;
+package com.rapidrepairbackend.controllers;
 
 
+import com.rapidrepairbackend.service.ProfilePageService;
+import com.rapidrepairbackend.entity.User;
+import com.rapidrepairbackend.entity.Admin;
 import org.springframework.web.bind.annotation.*;
 
 @RequestMapping("/userprofile")

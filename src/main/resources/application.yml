@@ -9,13 +9,25 @@ spring:
   jpa:
     hibernate:
       ddl-auto: update
-    openInView: false
-    show_sql: true
+    open-in-view: false
+    show-sql: true
     generate-ddl: true
   data:
     jpa:
-      repositories:
-        enabled: true
+      hibernate:
+        ddl-auto: update
+      openInView: false
+      show_sql: true
+      generate-ddl: true
+      data:
+        jpa:
+          repositories.enabled: true
 
 frontend:
   url: ${FRONTEND_API_URL:http://localhost:4200}
+
+security:
+  jwt:
+    token:
+      secret-key: 404E635266556A586E3272357538782F413F4428472B4B6250645367566B5970
+      token-duration-minutes: ${TOKEN_DURATION_MINUTES:600}

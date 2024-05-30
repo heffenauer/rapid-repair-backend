@@ -1,6 +1,8 @@
-package com.rapidrepairbackend;
+package com.rapidrepairbackend.service;
 
 
+import com.rapidrepairbackend.entity.Admin;
+import com.rapidrepairbackend.entity.User;
 import org.springframework.stereotype.Service;
 
 @Service
@@ -8,8 +10,8 @@ public class ProfilePageService {
 
     private long id = 2;
 
-    User user = new User(id++, "Adi", "Okeric", 22, "adi.okeric@stu.ssst.edu.ba", "adi123");
-    Admin admin = new Admin(1, "", "", "");
+    User user = new User(id++, "Ado", "Ikeric", 22, "adi.okeric@stu.ssst.edu.ba", "adi123", "gaserman");
+   Admin admin = new Admin(1, "", "", "");
 
 
     public User currentUser() {

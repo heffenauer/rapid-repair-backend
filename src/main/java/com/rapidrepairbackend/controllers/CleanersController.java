@@ -1,5 +1,7 @@
-package com.rapidrepairbackend;
+package com.rapidrepairbackend.controllers;
 
+import com.rapidrepairbackend.service.CleanersService;
+import com.rapidrepairbackend.entity.Cleaners;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.List;

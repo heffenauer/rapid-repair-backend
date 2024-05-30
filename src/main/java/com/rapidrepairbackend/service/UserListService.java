@@ -1,6 +1,7 @@
-package com.rapidrepairbackend;
+package com.rapidrepairbackend.service;
 
 
+import com.rapidrepairbackend.entity.User;
 import com.rapidrepairbackend.repositories.UserRepository;
 import org.springframework.stereotype.Service;
 

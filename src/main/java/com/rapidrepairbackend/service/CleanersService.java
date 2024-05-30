@@ -1,6 +1,7 @@
-package com.rapidrepairbackend;
+package com.rapidrepairbackend.service;
 
 
+import com.rapidrepairbackend.entity.Cleaners;
 import org.springframework.stereotype.Service;
 
 import java.util.ArrayList;

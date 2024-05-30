@@ -1,5 +1,6 @@
-package com.rapidrepairbackend;
+package com.rapidrepairbackend.service;
 
+import com.rapidrepairbackend.entity.Timezone;
 import org.springframework.stereotype.Service;
 
 import java.util.ArrayList;
@@ -10,11 +11,11 @@ import java.util.Optional;
 public class TimezoneService {
   private List<Timezone> timezones = new ArrayList<>();
 
-  public TimezoneService() {
-    timezones.add(new Timezone("UTC", "Coordinated Universal Time"));
-    timezones.add(new Timezone("EST", "Eastern Standard Time"));
-    timezones.add(new Timezone("PST", "Pacific Standard Time"));
-  }
+//  public TimezoneService() {
+//    timezones.add(new Timezone("UTC", "Coordinated Universal Time"));
+//    timezones.add(new Timezone("EST", "Eastern Standard Time"));
+//    timezones.add(new Timezone("PST", "Pacific Standard Time"));
+//  }
 
   public List<Timezone> getAllTimezones() {
     return timezones;

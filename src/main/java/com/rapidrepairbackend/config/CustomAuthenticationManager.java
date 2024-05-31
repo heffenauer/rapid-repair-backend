@@ -31,7 +31,7 @@ public class CustomAuthenticationManager implements AuthenticationManager {
         if (!passwordEncoder().matches(authentication.getCredentials().toString(), userDetail.getPassword())) {
             throw new BadCredentialsException("Wrong password");
         }
-        return new UsernamePasswordAuthenticationToken(userDetail.getUsername(), userDetail.getPassword(), userDetail.getAuthorities());
+        return new UsernamePasswordAuthenticationToken(userDetail.getUsername(), userDetail.getPassword());
     }
 
 }

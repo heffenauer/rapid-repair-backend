@@ -7,6 +7,7 @@ import org.springframework.context.annotation.Configuration;
 import org.springframework.security.config.annotation.method.configuration.EnableGlobalMethodSecurity;
 import org.springframework.security.config.annotation.web.builders.HttpSecurity;
 import org.springframework.security.config.http.SessionCreationPolicy;
+import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
 import org.springframework.security.web.SecurityFilterChain;
 import org.springframework.security.web.authentication.UsernamePasswordAuthenticationFilter;
 
@@ -30,9 +31,10 @@ public class WebSecurityConfig {
                                 "/list/**",
                                 "/services/**",
                                 "/users/**",
+                                "/register/**",
                                 "/log/**",
                                 "/bug-report/**"
-                                ).permitAll()
+                        ).permitAll()
                         // all other requests need to be authenticated
                         .anyRequest().authenticated()
                 )
@@ -44,5 +46,10 @@ public class WebSecurityConfig {
         // Add a filter to validate the tokens with every request
         http.addFilterBefore(jwtRequestFilter, UsernamePasswordAuthenticationFilter.class);
         return http.build();
+    }
+
+    @Bean
+    public BCryptPasswordEncoder passwordEncoder() {
+        return new BCryptPasswordEncoder();
     }
 }

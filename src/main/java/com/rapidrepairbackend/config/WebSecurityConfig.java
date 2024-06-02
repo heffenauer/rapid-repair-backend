@@ -33,7 +33,8 @@ public class WebSecurityConfig {
                                 "/users/**",
                                 "/register/**",
                                 "/log/**",
-                                "/bug-report/**"
+                                "/bug-report/**",
+                                 "cleaners/**"
                         ).permitAll()
                         // all other requests need to be authenticated
                         .anyRequest().authenticated()

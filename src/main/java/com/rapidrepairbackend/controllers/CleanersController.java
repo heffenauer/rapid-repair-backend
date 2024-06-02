@@ -10,19 +10,25 @@ import java.util.List;
 @RestController
 public class CleanersController {
 
-
     private final CleanersService cleanersService;
 
     public CleanersController(CleanersService cleanersService) {
         this.cleanersService = cleanersService;
-
     }
-
 
     @GetMapping("list")
     public List<Cleaners> getCleaners() {
         return this.cleanersService.getCleanersList();
     }
+
+    @PostMapping()
+    public Cleaners createCleaners(@RequestBody Cleaners cleaner) {
+        return this.cleanersService.createCleaner(cleaner);
+    }
+
+
+
+/*
 
     @GetMapping("{id}")
     public Cleaners getCleanersById(@PathVariable Integer id) {
@@ -34,10 +40,7 @@ public class CleanersController {
         this.cleanersService.deleteCleaner(id);
     }
 
-    @PostMapping()
-    public Cleaners createCleaners(@RequestBody Cleaners cleaner) {
-        return this.cleanersService.createCleaner(cleaner);
-    }
+
 
     @PutMapping("{id}")
     public Cleaners updateCleaners(@PathVariable Long id,@RequestBody Cleaners cleaner) {
@@ -45,7 +48,7 @@ public class CleanersController {
     }
 
 
-
+*/
 
 }
 

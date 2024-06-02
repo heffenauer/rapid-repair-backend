@@ -1,4 +1,3 @@
-// /src/test/java/com/rapidrepairbackend/service/ServiceListServiceTest.java
 package com.rapidrepairbackend.services;
 
 import com.rapidrepairbackend.entity.ServiceEntity;

@@ -1,8 +1,8 @@
-// /src/test/java/com/rapidrepairbackend/service/ServiceListServiceTest.java
-package com.rapidrepairbackend.service;
+package com.rapidrepairbackend.services;
 
 import com.rapidrepairbackend.entity.ServiceEntity;
 import com.rapidrepairbackend.repositories.ServiceRepository;
+import com.rapidrepairbackend.service.ServiceListService;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 import org.mockito.InjectMocks;

@@ -7,8 +7,10 @@ import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
+import java.security.Principal;
+
 @RestController
-@RequestMapping("/register")
+@RequestMapping()
 public class UserController {
     private final UserService userService;
 
@@ -16,9 +18,18 @@ public class UserController {
         this.userService = userService;
     }
 
-    @PostMapping
+    @PostMapping("/register")
     public ResponseEntity<User> registerUser(@RequestBody UserRegistrationDto registrationDto) {
         User registeredUser = userService.registerUser(registrationDto);
         return new ResponseEntity<>(registeredUser, HttpStatus.CREATED);
     }
+
+    @GetMapping("/profile")
+    public ResponseEntity<User> getUserProfile(Principal principal) {
+        String username = principal.getName();
+        User user = userService.findByUsername(username);
+        return ResponseEntity.ok(user);
+    }
+
+
 }

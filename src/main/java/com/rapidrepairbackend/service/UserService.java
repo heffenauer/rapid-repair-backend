@@ -30,4 +30,9 @@ public class UserService {
         user.setUsername(registrationDto.getUsername());
         return userRepository.save(user);
     }
+
+
+    public User findByUsername(String username) {
+        return userRepository.findbyUsername(username);
+    }
 }

@@ -21,12 +21,9 @@ public class WebSecurityConfig {
 
     @Bean
     public SecurityFilterChain filterChain(HttpSecurity http) throws Exception {
-        // CSRF not needed
         http.csrf().disable()
-                // enabled cors
                 .cors().and()
                 .authorizeHttpRequests((authz) -> authz
-                        // don't authenticate this particular request
                         .requestMatchers("/authenticate/**",
                                 "/list/**",
                                 "/services/**",
@@ -34,17 +31,13 @@ public class WebSecurityConfig {
                                 "/register/**",
                                 "/log/**",
                                 "/bug-report/**",
-                                 "cleaners/**"
+                                "/cleaners/**"
                         ).permitAll()
-                        // all other requests need to be authenticated
                         .anyRequest().authenticated()
                 )
-                // exceptions handling
                 .exceptionHandling().authenticationEntryPoint(jwtAuthenticationEntryPoint).and()
-                // make sure stateless session is used; session won't be used to store user's state
                 .sessionManagement(session -> session.sessionCreationPolicy(SessionCreationPolicy.STATELESS));
 
-        // Add a filter to validate the tokens with every request
         http.addFilterBefore(jwtRequestFilter, UsernamePasswordAuthenticationFilter.class);
         return http.build();
     }

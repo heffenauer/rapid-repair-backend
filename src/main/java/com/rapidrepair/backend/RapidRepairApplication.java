@@ -1,0 +1,13 @@
+package com.rapidrepair.backend;
+
+import org.springframework.boot.SpringApplication;
+import org.springframework.boot.autoconfigure.SpringBootApplication;
+
+@SpringBootApplication
+public class RapidRepairApplication {
+
+    public static void main(String[] args) {
+        SpringApplication.run(RapidRepairApplication.class, args);
+    }
+
+}
